@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Floating Hearts */
+    .heart {
+        position: fixed;
+        color: #ff2d55;
+        font-size: 24px;
+        opacity: 0.9;
+        animation: floatUp 7s linear infinite;
+        z-index: 1;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(100vh) scale(1); opacity: 1; }
+        100% { transform: translateY(-20vh) scale(1.4); opacity: 0; }
+    }
+
+    h1 {
+        font-size: 45px;
+        color: #ff0055;
+        text-shadow: 0 0 12px white;
+        margin-bottom: 30px;
+        animation: fadeIn 2s ease;
+        z-index: 10;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Paragraph text */
+    .text {
+        max-width: 900px;
+        font-size: 20px;
+        color: #4d0026;
+        line-height: 1.6;
+        font-weight: 500;
+        z-index: 10;
+        opacity: 0;
+        animation: fadePara 1.5s ease forwards;
+        margin-bottom: 40px;
+    }
+
+    @keyframes fadePara {
+        to { opacity: 1; }
+    }
+
+    /* QUEEN BUTTON */
+    .queen-btn {
+        font-size: 22px;
+        padding: 12px 30px;
+        background: #ff4f81;
+        color: white;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 0 18px rgba(255, 0, 85, 0.6);
+        animation: glowPulse 2s infinite ease-in-out;
+        z-index: 10;
+    }
+
+    @keyframes glowPulse {
+        0% { box-shadow: 0 0 10px #ff0055; }
+        50% { box-shadow: 0 0 25px #ff4f81; }
+        100% { box-shadow: 0 0 10px #ff0055; }
+    }
+
+    .queen-btn:hover {
+        transform: scale(1.08);
+        background: #ff0055;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts Script -->
+<script>
+function createHearts() {
+    let heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+}
+setInterval(createHearts, 300);
+</script>
+
+<h1>For Someone Special ❤️</h1>
+
+<p class="text">
+    From the very first day I knew you, I realized you are someone truly rare.
+    Your nature is so pure and kind that it feels like a blessing to even talk to you.
+    You carry a beauty that is not just in your face, but in your heart, your smile,
+    and the way you treat people. You’re helpful without expecting anything back,
+    joyful without limits, and cool in a way that makes everything around you feel lighter.
+    Your positive thinking, your self-confidence, and that sweet voice of yours—it all creates
+    a vibe that can brighten even the dullest day. You have no ego, no attitude, just a beautiful soul
+    that spreads happiness effortlessly. And honestly, having someone like you in my life
+    makes me feel lucky in ways I can’t even fully express.
+</p>
+
+<!-- 👑 QUEEN BUTTON (with redirect link) -->
+<a href="image .html" class="queen-btn">👑 </a>
+
+</body>
+</html>

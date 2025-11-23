@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beautiful Moments Gallery ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        color: #ff0055;
+        text-shadow: 0 0 12px white;
+        margin-bottom: 30px;
+        animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Tree layout container */
+    .tree-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .image-row {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    /* IMAGE EFFECTS */
+    .img-box {
+        width: 210px;
+        height: 210px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 18px rgba(255, 0, 85, 0.4);
+        animation: fadeUp 1.5s ease;
+        transition: 0.4s ease-in-out;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+
+    /* Fade up entry animation */
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Image inside box */
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s ease;
+    }
+
+    /* Hover Effects */
+    .img-box:hover {
+        transform: scale(1.08) rotate3d(1, 1, 0, 10deg);
+        box-shadow: 0 0 30px rgba(255, 0, 85, 0.8);
+    }
+
+    .img-box:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.15);
+    }
+
+    /* Heart sparkle overlay */
+    .img-box::after {
+        content: "💖";
+        position: absolute;
+        font-size: 35px;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.2);
+        transition: 0.4s ease;
+    }
+
+    .img-box:hover::after {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* MORE BUTTON */
+    .more-btn {
+        margin-top: 10px;
+        font-size: 22px;
+        padding: 12px 30px;
+        background: #ff4f81;
+        color: white;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 0 18px rgba(255, 0, 85, 0.6);
+        animation: glowPulse 2s infinite ease-in-out;
+    }
+
+    @keyframes glowPulse {
+        0% { box-shadow: 0 0 10px #ff0055; }
+        50% { box-shadow: 0 0 25px #ff4f81; }
+        100% { box-shadow: 0 0 10px #ff0055; }
+    }
+
+    .more-btn:hover {
+        transform: scale(1.08);
+        background: #ff0055;
+    }
+</style>
+</head>
+
+<body>
+
+<div>
+    <h1>Beautiful Moments 🌸</h1>
+
+    <div class="tree-container">
+
+        <!-- Top image -->
+        <div class="image-row">
+            <div class="img-box">
+                <img src="pick4.jpg" alt="Top Image">
+            </div>
+        </div>
+
+        <!-- Middle 2 images -->
+        <div class="image-row">
+            <div class="img-box">
+                <img src="pick1.jpg" alt="Middle Image 1">
+            </div>
+            <div class="img-box">
+                <img src="pick2.jpg" alt="Middle Image 2">
+            </div>
+        </div>
+
+        <!-- Bottom image -->
+        <div class="image-row">
+            <div class="img-box">
+                <img src="pick3.jpg" alt="Bottom Image">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MORE BUTTON -->
+    <a href="ans.html" class="more-btn">More ➜</a>
+</div>
+
+</body>
+</html>
